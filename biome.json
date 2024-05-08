@@ -8,7 +8,8 @@
     "rules": {
       "all": true,
       "suspicious": {
-        "noExplicitAny": "off"
+        "noExplicitAny": "off",
+        "noArrayIndexKey": "off"
       },
       "style": {
         "useNamingConvention": "off"
@@ -18,6 +19,9 @@
       },
       "complexity": {
         "useSimplifiedLogicExpression": "off"
+      },
+      "correctness": {
+        "noUndeclaredVariables": "off"
       }
     }
   },
