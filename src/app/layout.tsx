@@ -3,20 +3,19 @@ import '@mantine/charts/styles.css'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 import '@mantine/core/styles.css'
 import '@mantine/dates/styles.css'
-import { Notifications } from '@mantine/notifications'
 import '@mantine/notifications/styles.css'
 import 'global.css'
 import type { Viewport } from 'next'
 import React from 'react'
 import { theme } from 'theme'
-import { MantineDateProvider } from '~/utils'
+import { GameProvider } from '~/utils'
 
 export const metadata = {
   title: {
-    default: '案件名',
-    template: '%s | 案件名',
+    default: 'テトリス',
+    template: '%s | テトリス',
   },
-  description: '案件の説明文を入れる',
+  description: 'テトリスです',
 }
 
 export const viewport: Viewport = {
@@ -35,11 +34,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body>
-        <MantineProvider defaultColorScheme="light" theme={theme}>
-          <MantineDateProvider>
-            <Notifications />
-            {children}
-          </MantineDateProvider>
+        <MantineProvider defaultColorScheme="dark" theme={theme}>
+          <GameProvider>{children}</GameProvider>
         </MantineProvider>
       </body>
     </html>

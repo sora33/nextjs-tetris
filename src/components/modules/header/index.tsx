@@ -1,20 +1,15 @@
-import { Flex, Paper, Text } from '@mantine/core'
-import Image from 'next/image'
+import { Anchor, Flex, Paper } from '@mantine/core'
 import Link from 'next/link'
 import { Container } from '~/components/modules'
-import { CLIENT_HOME_PAGE } from '~/utils'
 
 export const Header = () => {
   return (
     <Paper shadow="xs">
-      <Container pt="xs">
+      <Container py="md">
         <Flex justify="space-between" align="center">
-          <Link href={CLIENT_HOME_PAGE} className="primary-link">
-            <Text fz="xs" fw="bold">
-              〇〇アプリ
-            </Text>
-            <Image src="/logo.png" alt="logo" width={90} height={28} />
-          </Link>
+          <Anchor component={Link} href="/" variant="subtle" size="xl" fw="bold">
+            Next.js & Mantine で Tetris
+          </Anchor>
         </Flex>
       </Container>
     </Paper>

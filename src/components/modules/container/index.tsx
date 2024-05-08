@@ -6,7 +6,7 @@ type Props = ContainerProps & {
 
 export const Container = (props: Props) => {
   return (
-    <MantineContainer size="md" {...props}>
+    <MantineContainer size="xs" maw="400px" {...props}>
       {props.children}
     </MantineContainer>
   )
