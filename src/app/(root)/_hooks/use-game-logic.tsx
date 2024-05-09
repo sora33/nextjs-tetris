@@ -25,7 +25,7 @@ type TurnState = {
     data: (string | null)[]
   }
   nextDropBlock: DropBlockData[]
-  holdBlock: DropBlockData | null // この行を更新
+  holdBlock: DropBlockData | null
   isDropped: boolean
 }
 
@@ -150,18 +150,12 @@ export const useGameLogic = () => {
     })
   }, [])
 
-  // ターン開始時の処理
-  const handleNextTurn = useCallback(() => {
-    // 何かターン開始時の処理があればここに記述
-  }, [])
-
   return {
     turnState,
     handleOnMove,
     handleOnRotate,
     handleOnDropped,
     handleHardDrop,
-    handleNextTurn,
     handleOnHold,
   }
 }
