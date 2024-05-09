@@ -1,4 +1,5 @@
 'use client'
+
 import { Button, Flex, Stack, Text } from '@mantine/core'
 import { useGame } from '~/utils'
 

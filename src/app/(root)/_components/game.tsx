@@ -1,21 +1,15 @@
 'use client'
-import { Box, Flex, Kbd, Paper, SimpleGrid, Space, Stack, Text } from '@mantine/core'
+
+import { Box, Flex, Paper, SimpleGrid, Space, Stack, Text } from '@mantine/core'
 import React, { useEffect, useRef } from 'react'
 import { DropBlock, GhostBlock } from '~/app/(root)/_components/drop-block'
 import { KeyMap } from '~/app/(root)/_components/key-map'
-import { useGameLogic } from '~/app/(root)/_hooks/useGameLogic'
+import { useGameLogic } from '~/app/(root)/_hooks/use-game-logic'
 import { FIELD_SIZE } from '~/utils/constants'
 
 export const Game: React.FC = () => {
-  const {
-    turnState,
-    handleNextTurn,
-    handleOnMove,
-    handleOnRotate,
-    handleOnDropped,
-    handleHardDrop,
-    handleOnHold,
-  } = useGameLogic()
+  const { turnState, handleOnMove, handleOnRotate, handleOnDropped, handleHardDrop, handleOnHold } =
+    useGameLogic()
 
   // キーマップの設定
   const keyMap = [
@@ -88,7 +82,6 @@ export const Game: React.FC = () => {
           onRotate={handleOnRotate}
           isDropped={turnStateRef.current.isDropped}
           onDropped={handleOnDropped}
-          nextTurn={handleNextTurn}
           onHardDrop={handleHardDrop}
           onHold={handleOnHold}
         />
