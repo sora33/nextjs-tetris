@@ -27,7 +27,8 @@ yarn dev
 
 #### フィールド
 
-- 縦 20 行横 10 列
+- 縦 20 行
+- 横 14 列
 
 #### ミノ
 
@@ -75,9 +76,9 @@ yarn dev
 
 ```mermaid
 stateDiagram-v2
-  Start --> DuringGame: ゲーム開始
-  DuringGame --> Result: ゲームオーバー
-  Result --> Start: 再スタート
+    Start --> DuringGame: ゲーム開始
+    DuringGame --> Result: ゲームオーバー
+    Result --> Start: 再スタート
 ```
 
 ### 処理の流れ
