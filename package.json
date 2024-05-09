@@ -6,8 +6,8 @@
     "dev": "next dev --port 3000",
     "build": "next build",
     "start": "next start",
-    "lint": "biome lint --apply ./app",
-    "format": "biome format --write ./app"
+    "lint": "biome lint --apply ./src",
+    "format": "biome format --write ./src"
   },
   "dependencies": {
     "@mantine/carousel": "7.5.1",
